@@ -1,0 +1,145 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.userView__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  p {
+    width: 16.6%;
+    text-align: left;
+    color: #3c484bff;
+    @include mQ(700px) {
+      font-size: 0.8rem;
+    }
+    img {
+      width: 25px;
+      border-radius: 50%;
+    }
+    .star {
+      font-size: 1.5rem;
+      color: chocolate;
+    }
+  }
+}
+
+.userView__answerArea {
+  overflow: hidden;
+  .userView__answer {
+    padding: 2%;
+    .more-detail {
+      display: flex;
+
+      .detail-left {
+        width: 10%;
+        color: gray;
+        @include mQ(1100px) {
+          width: 15%;
+        }
+        @include mQ(700px) {
+          width: 30%;
+        }
+      }
+      .detail-right {
+        width: 90%;
+        text-align: left;
+        color: #3c484bff;
+
+        @include mQ(1100px) {
+          width: 85%;
+        }
+        @include mQ(700px) {
+          width: 70%;
+        }
+        .comment {
+          display: flex;
+          align-items: center;
+          img {
+            width: 25px;
+            border-radius: 50%;
+            margin-right: 2%;
+          }
+        }
+        .see-all {
+          text-decoration: none;
+          color: grey;
+          &:hover {
+            color: #089bab;
+          }
+        }
+        .input-comment {
+          margin-top: 2%;
+          display: flex;
+          align-items: center;
+          background-color: lighten(grey, 35);
+          width: min-content;
+          padding: 10px;
+          border-bottom: 2px solid grey;
+          @include mQ(700px) {
+            width: 70%;
+          }
+          img {
+            width: 25px;
+            border-radius: 50%;
+            margin-right: 2%;
+          }
+          input {
+            width: inherit;
+            font-size: 1.3rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+          }
+          button {
+            border: none;
+            outline: none;
+            color: #089bab;
+            font-size: 1.3rem;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .detail-footer {
+      text-align: right;
+      @include mQ(700px) {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+      a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin: 0 2%;
+      }
+      .view-file {
+        color: chocolate;
+        transition: all 0.3s ease;
+        padding: 10px;
+        border-radius: 20px;
+        &:hover {
+          color: #fff;
+          background-color: chocolate;
+        }
+      }
+      .summary {
+        color: white;
+        background-color: chocolate;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #fff;
+          color: chocolate;
+        }
+      }
+    }
+  }
+}

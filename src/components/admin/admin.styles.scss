@@ -1,0 +1,246 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.admin {
+  display: flex;
+  @include mQ(1100px) {
+    flex-direction: column;
+  }
+  .left-nav {
+    width: 18%;
+    background-color: #089bab;
+    @include mQ(1100px) {
+      width: 100%;
+    }
+    img {
+      width: 90%;
+      @include mQ(1100px) {
+        width: 40%;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 10px;
+      @include mQ(1100px) {
+        display: flex;
+      }
+      li {
+        margin: 20% 0;
+        @include mQ(1100px) {
+          width: 50%;
+          margin: 0;
+        }
+        a {
+          color: white;
+          width: 100%;
+          display: block;
+          text-decoration: none;
+          font-size: 1.3rem;
+          font-weight: 400;
+          padding: 10px;
+          transition: all 0.3s ease-in;
+          @include mQ(1100px) {
+            font-size: 1rem;
+          }
+          @include mQ(700px) {
+            font-size: 0.6rem;
+            padding: 2px;
+          }
+          .left-nav-icon {
+            margin-right: 5%;
+            @include mQ(700px) {
+              margin-right: 2%;
+            }
+          }
+          span {
+            letter-spacing: 2px;
+            @include mQ(700px) {
+              letter-spacing: 0;
+            }
+          }
+          &:hover {
+            background-color: white;
+            color: #089bab;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            cursor: pointer;
+            @include mQ(1100px) {
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+    .bottom-nav {
+      // border-top: 2px solid white;
+      // margin: 0px 20px;
+      margin-top: 30%;
+      @include mQ(1100px) {
+        margin: 0;
+      }
+      .line {
+        background-color: white;
+        height: 2px;
+        margin: 0 5%;
+      }
+    }
+  }
+
+  .admin-body {
+    width: 82%;
+    padding: 0 5%;
+    @include mQ(1100px) {
+      width: 100%;
+      padding: 0px;
+    }
+    .admin-header {
+      display: flex;
+      align-items: center;
+      height: 10%;
+      justify-content: space-between;
+      @include mQ(700px) {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .admin-search {
+        width: 70%;
+        @include mQ(700px) {
+          width: 90%;
+          padding: 3%;
+        }
+      }
+      .admin-header-right {
+        display: flex;
+        align-items: center;
+        @include mQ(700px) {
+          justify-content: space-between;
+        }
+        a {
+          font-size: 1.6rem;
+          margin-left: 2rem;
+          color: grey;
+          &:hover {
+            color: black;
+          }
+        }
+        .user {
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            @include mQ(1100px) {
+              width: 40px;
+              height: 40px;
+              margin: 10px;
+            }
+          }
+        }
+      }
+    }
+    .admin-content {
+      background-color: white;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 0px 10px 5px rgb(212, 212, 212);
+      -moz-box-shadow: 0 0px 10px 5px rgb(212, 212, 212);
+      box-shadow: 0 0px 10px 5px rgb(212, 212, 212);
+      transition: all 0.5s ease;
+      padding: 2%;
+      .admin-content-header {
+        .header-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            font-weight: 500;
+            color: #089bab;
+            cursor: pointer;
+          }
+          button {
+            background-color: orange;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.3rem;
+            cursor: pointer;
+            &:hover {
+              background-color: chocolate;
+            }
+          }
+        }
+        .header-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 2% 0;
+          @include mQ(700px) {
+            flex-direction: column;
+          }
+          .bottom-search {
+            width: 55%;
+            @include mQ(700px) {
+              width: 100%;
+            }
+          }
+          .tags {
+            display: flex;
+
+            align-items: center;
+            @include mQ(700px) {
+              justify-content: space-between;
+              margin: 20px 0;
+              width: 100%;
+            }
+            a {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              color: #089bab;
+              background-color: lighten(grey, 40);
+              padding: 10px;
+              border-radius: 30px;
+              font-weight: 400;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background-color: #089bab;
+                color: #fff;
+              }
+              @include mQ(1100px) {
+                padding: 5px;
+                font-size: 0.8rem;
+              }
+              span {
+                margin-left: 5px;
+                @include mQ(1100px) {
+                  margin-left: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .admin-content-body {
+        .table-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          p {
+            width: 16.6%;
+            color: gray;
+            @include mQ(700px) {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
